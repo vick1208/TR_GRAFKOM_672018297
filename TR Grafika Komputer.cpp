@@ -33,6 +33,7 @@ void disp() {
 		glRotatef(xp, 1.0f, 0.0f, 0.0);
 		glRotatef(yp, 0.0f, 1.0f, 0.0f);
 	}
+	//Badan Atas
 	glBegin(GL_POLYGON);
 	glColor3f(1.0f, 1.0f, 1.0f);
 	glVertex3i(2, 30, 10);
@@ -67,6 +68,21 @@ void disp() {
 	glVertex3i(20, 30, 10);
 	glVertex3i(20, 10, 10);
 	glVertex3i(2, 10, 10);
+	glEnd();
+	//////badan bawah//////
+	glBegin(GL_QUADS);
+	glColor3f(1.0f, 1.0f, 1.0f);
+	glVertex3i(-10, 10, 5);
+	glVertex3i(30, 10, 5);
+	glVertex3i(30, -10, 5);
+	glVertex3i(-10, -10, 5);
+	glEnd();
+	glBegin(GL_POLYGON);
+	glColor3f(1.0f, 1.0f, 1.0f);
+	glVertex3i(-10, 10, 5);
+	glVertex3i(-10, 10, 90);
+	glVertex3i(-10, -10, 90);
+	glVertex3i(-10, -10, 5);
 	glEnd();
 	glutSwapBuffers();
 }
